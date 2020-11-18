@@ -7,7 +7,13 @@ def depthling(input):
     return ([depthling(x) for x in input])
 
 
+#addtogether takes two arrays or arrays of arrays with the same structure and adds together all elements.
+#an example input pair of [1,2,3] and [1,3,3] would yield a result of [2,5,6]
+def addtogether(input1, input2):
+    if type(input1[0]) == type(0):
 
+        return ([input1[x] + input2[x] for x in range(len(input1))])
+    return ([addtogether(input1[x], input2[x]) for x in range(len(input1))])
 
 
 
